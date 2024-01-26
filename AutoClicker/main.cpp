@@ -7,7 +7,6 @@ void menu() {
     cout << "Simple AutoClicker |24Money| \n";
     cout << "Press Left Mouse To Interact! \n";
 }
-
 void clicker() {
     while (true) {
         int pressed = false;
@@ -19,9 +18,9 @@ void clicker() {
                 Input[0].mi.dwFlags = MOUSEEVENTF_LEFTUP;
                 Input[1].type = INPUT_MOUSE;
                 Input[1].mi.dwFlags = MOUSEEVENTF_LEFTDOWN;
-                ::SendInput(INPUT_COUNT, Input, sizeof(INPUT));
+                SendInput(INPUT_COUNT, Input, sizeof(INPUT));
                 pressed = false;
-                Sleep(130); // Adjust click speed as needed
+                Sleep(90); // Adjust click speed as needed
 
             }
 
